@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1" >
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Личные наличные</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="wrapper">
+            <div class="container">
+                <div class="header__top">
+                    <a href="#" class="header__logo">
+                        <img src="img/header-logo.png" alt="">
+                    </a>
+                    <div class="header__p">
+                        <span>Займы под залог авто</span>
+                        для физических и юридических
+                        <br>
+                        лиц в Саратове
+                    </div>
+                    <div class="header__links">
+                        <a href="#">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3415 3.17379C12.761 1.68423 10.6537 0.856689 8.42927 0.856689C3.80488 0.856689 0.0585357 4.38752 0.0585357 8.74588C0.0585357 10.1251 0.468293 11.5043 1.17073 12.6629L0 16.7454L4.44878 15.642C5.67805 16.2489 7.02439 16.5799 8.42927 16.5799C13.0537 16.5799 16.8 13.0491 16.8 8.69071C16.7415 6.64945 15.922 4.66336 14.3415 3.17379ZM12.4683 11.5595C12.2927 12.0009 11.4732 12.4422 11.0634 12.4974C10.7122 12.5526 10.2439 12.5526 9.77561 12.4422C9.48293 12.3319 9.07317 12.2215 8.60488 12.0009C6.49756 11.1733 5.15122 9.18723 5.03415 9.02173C4.91707 8.91139 4.1561 7.97351 4.1561 6.98047C4.1561 5.98742 4.68293 5.54607 4.85854 5.32539C5.03415 5.10471 5.26829 5.10471 5.4439 5.10471C5.56098 5.10471 5.73658 5.10471 5.85366 5.10471C5.97073 5.10471 6.14634 5.04955 6.32195 5.43573C6.49756 5.82191 6.90732 6.81496 6.96585 6.87013C7.02439 6.98047 7.02439 7.09081 6.96585 7.20114C6.90732 7.31148 6.84878 7.42182 6.73171 7.53216C6.61463 7.6425 6.49756 7.808 6.43902 7.86317C6.32195 7.97351 6.20488 8.08385 6.32195 8.24936C6.43902 8.47003 6.84878 9.07689 7.49268 9.62859C8.31219 10.2906 8.9561 10.5113 9.19024 10.6216C9.42439 10.732 9.54146 10.6768 9.65854 10.5665C9.77561 10.4561 10.1854 10.0148 10.3024 9.7941C10.4195 9.57342 10.5951 9.62859 10.7707 9.68376C10.9463 9.73892 12 10.2354 12.1756 10.3458C12.4098 10.4561 12.5268 10.5113 12.5854 10.5665C12.6439 10.732 12.6439 11.1182 12.4683 11.5595Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.958753 6.91955C2.82915 5.9452 4.91702 5.13194 6.86782 4.31456C10.224 2.97574 13.5934 1.66013 16.9969 0.435315C17.6591 0.22663 18.8489 0.0225739 18.9656 0.950639C18.9016 2.26436 18.6388 3.57039 18.4586 4.87641C18.0011 7.74849 17.4723 10.6107 16.9566 13.4733C16.7789 14.4269 15.5159 14.9205 14.7078 14.3103C12.7657 13.0696 10.8086 11.841 8.89127 10.5715C8.26321 9.96794 8.84562 9.10116 9.40654 8.67015C11.0061 7.17926 12.7025 5.91257 14.2185 4.34463C14.6275 3.41072 13.4192 4.19779 13.0206 4.43898C10.8308 5.86619 8.69451 7.38053 6.38571 8.63486C5.20638 9.24883 3.83185 8.72415 2.65305 8.38156C1.59613 7.96768 0.0473132 7.55071 0.958646 6.91967L0.958753 6.91955Z" fill="#F7FFFF"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__phone">
+                        <a href="tel:+78007775837">+7 (800) 777-58-37</a>
+                        Приём заявок с 9 до 19
+                    </div>
+                    <div class="burger__btn">
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                    </div>
+                </div>
+                <div class="header__mid">
+                    <a href="#calc">Рассчитать платеж</a>
+                    <a href="#step">Деньги через 51 минут</a>
+                    <a href="#tab">Условия и требования</a>
+                    <a href="#contacts">Контакты</a>
+                    <a href="#" class="app">Онлайн заявка</a>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__title">Получи займ под залог авто </div>
+                    <div class="header__subtitle">наличными от 50 тыс до 5 млн на<br> срок от 2 дней до 36 месяцев</div>
+                    <div class="header__plus--row">
+                        <div class="header__plus--item">
+                            <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_75)"/>
+<defs>
+<linearGradient id="paint0_linear_206_75" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                            Автомобиль остаётся у Вас!
+                        </div>
+                        <div class="header__plus--item">
+                            <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_75)"/>
+<defs>
+<linearGradient id="paint0_linear_206_75" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                            Одобряем более 90% обращений
+                        </div>
+                        <div class="header__plus--item">
+                            <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_75)"/>
+<defs>
+<linearGradient id="paint0_linear_206_75" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                            С любой кредитной историей
+                        </div>
+                    </div>
+                    <form action="" class="header__form">
+                        <div class="header__phone--container">
+                            <label for="">Ваш телефон</label>
+                            <input type="text" name="phone" placeholder="+7(___) ___-____"> 
+                        </div>
+                        <button class="app">Отправить заявку</button>
+                    </form>
+                    <div class="header__watch"><img src="img/watch.png" alt="">Получите решение и одобренную сумму через 15 минут !</div>
+                    <img src="img/header-bg.png" alt="" class="header__bg">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper cards__wrapper">
+                <div class="container">
+                    <div class="card">
+                        <img src="img/card1.png" alt="">
+                        <div class="card__title">Залог<br>автомобиля</div>
+                        <div class="card__subtitle">до 5.000.000 ₽</div>
+                        <a href="" class="app">Оформить заявку</a>
+                    </div>
+                    <div class="card">
+                        <img src="img/card2.png" alt="">
+                        <div class="card__title">Залог<br>недвижимости</div>
+                        <div class="card__subtitle">до 25.000.000 ₽ </div>
+                        <a href="" class="app">Оформить заявку</a>
+                    </div>
+                    <div class="card">
+                        <img src="img/card3.png" alt="">
+                        <div class="card__title">Залог грузового<br>автомобиля</div>
+                        <div class="card__subtitle">до 10.000.000 ₽ </div>
+                        <a href="" class="app">Оформить заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper calc__outer" id="calc">
+                <h1 class="calc__h1">Рассчитайте ежемесячный платеж</h1>
+                <div class="calc__wrapper">
+                    <form action="#" class="container" id="calc__form">
+                        <div class="calc__row">
+                            <div class="calc__item">
+                                <div class="calc__title">Сумма займа, ₽</div>
+                                <input type="text" id="calc__sum--input" value="50000">
+                                <div  class="calc__range" id="calc__sum--range"></div>
+                                <div class="calc__num--row">
+                                    <div>1.000</div>
+                                    <div>5.000.000</div>
+                                </div>
+                            </div>
+                            <div class="calc__item">
+                                <div class="calc__title">Срок займа, мес</div>
+                                <input type="text" id="calc__month--input" value="12">
+                                <div class="calc__range" id="calc__month--range"></div>
+                                <div class="calc__num--row">
+                                    <div>6</div>
+                                    <div>36</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc__bottom">
+                            <div class="calc__payment">
+                                Ежемесячный платеж
+                                <span>2930₽</span>
+                            </div>
+                            <div class="calc__percent">
+                               Процентная ставка 
+                                <span>5,86%</span>
+                                <a href="#">Предложить свою</a>
+                            </div>
+                            <div class="calc__phone--container">
+                                <div class="calc__phone">
+                                    <label for="">Ваш телефон</label>
+                                    <input type="text" name="phone" placeholder="+7(___) ___-____"> 
+                                </div>
+                                <a href="#" class="calc__btn">Оставить заявку</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="wrapper step__wrapper" id="step">
+                <div class="container">
+                    <h1>Всего <span>51 минута</span> до получения займа!</h1>
+                    <div class="step__row">
+                        <div class="step__item">
+                            <div class="step__img">
+                                <img src="img/step1.png" alt="">
+                                <div>1</div>
+                            </div>
+                            <div class="step__title">Проведение бесплатной<br> экспертной оценки<br> автомобиля</div>
+                            <div class="step__subtitle">17 минут</div>
+                        </div>
+                        <div class="step__item">
+                            <div class="step__img">
+                                <img src="img/step2.png" alt="">
+                                <div>2</div>
+                            </div>
+                            <div class="step__title">Заключение договора</div>
+                            <div class="step__subtitle">17 минут</div>
+                        </div>
+                        <div class="step__item">
+                            <div class="step__img">
+                                <img src="img/step3.png" alt="">
+                                <div>3</div>
+                            </div>
+                            <div class="step__title">Предоставление<br> денежных средств<br> наличными или на карту</div>
+                            <div class="step__subtitle">17 минут</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper links__wrapper">
+                <div class="container">
+                    <h1>Оформить займ просто</h1>
+                    <div class="links__row">
+                        <div class="links__item">
+                            <div class="links__title">Оформите заявку на<br> сайте</div>
+                            <a href="#" class="app">Оформить заявку</a>
+                        </div>
+                        <div class="links__item">
+                            <div class="links__title">Позвоните!</div>
+                            <a href="tel:+78007775837">+7 (800) 777-58-37</a>
+                        </div>
+                        <div class="links__item">
+                            <div class="links__title">Напишите в  чате!</div>
+                            <div class="links__soc">
+                                <a href="#"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.1159 4.11953C18.8439 1.97828 15.8146 0.788696 12.6171 0.788696C5.96951 0.788696 0.584145 5.86426 0.584145 12.1294C0.584145 14.112 1.17317 16.0947 2.18293 17.7601L0.5 23.6287L6.89512 22.0426C8.6622 22.915 10.5976 23.3908 12.6171 23.3908C19.2646 23.3908 24.65 18.3153 24.65 12.0501C24.5659 9.11579 23.3878 6.26079 21.1159 4.11953ZM18.4232 16.174C18.1707 16.8084 16.9927 17.4429 16.4037 17.5222C15.8988 17.6015 15.2256 17.6015 14.5524 17.4429C14.1317 17.2843 13.5427 17.1257 12.8695 16.8084C9.84024 15.6189 7.90488 12.7639 7.73659 12.5259C7.56829 12.3673 6.47439 11.0191 6.47439 9.59163C6.47439 8.16412 7.23171 7.52968 7.48415 7.21246C7.73659 6.89523 8.07317 6.89523 8.32561 6.89523C8.4939 6.89523 8.74634 6.89523 8.91463 6.89523C9.08292 6.89523 9.33537 6.81593 9.5878 7.37107C9.84024 7.92621 10.4293 9.35371 10.5134 9.43301C10.5976 9.59163 10.5976 9.75024 10.5134 9.90885C10.4293 10.0675 10.3451 10.2261 10.1768 10.3847C10.0085 10.5433 9.84024 10.7812 9.75609 10.8605C9.5878 11.0191 9.41951 11.1777 9.5878 11.4157C9.7561 11.7329 10.3451 12.6052 11.2707 13.3983C12.4488 14.35 13.3744 14.6672 13.711 14.8258C14.0476 14.9844 14.2159 14.9051 14.3841 14.7465C14.5524 14.5879 15.1415 13.9534 15.3098 13.6362C15.4781 13.319 15.7305 13.3983 15.9829 13.4776C16.2354 13.5569 17.75 14.2707 18.0024 14.4293C18.339 14.5879 18.5073 14.6672 18.5915 14.7465C18.6756 14.9844 18.6756 15.5396 18.4232 16.174Z" fill="white"/>
+</svg></a>
+                                <a href="#"><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.565891 9.81639C3.25459 8.41576 6.2559 7.24671 9.06017 6.07172C13.8846 4.14717 18.7282 2.25598 23.6207 0.495302C24.5726 0.195318 26.283 -0.0980127 26.4507 1.23608C26.3588 3.12455 25.981 5.00197 25.7219 6.87938C25.0643 11.008 24.3041 15.1225 23.5628 19.2375C23.3074 20.6082 21.4918 21.3177 20.3302 20.4405C17.5383 18.6571 14.7251 16.8909 11.9689 15.0661C11.066 14.1985 11.9033 12.9525 12.7096 12.3329C15.009 10.1897 17.4476 8.36886 19.6268 6.11495C20.2147 4.77244 18.4778 5.90386 17.9049 6.25056C14.7569 8.30218 11.686 10.4791 8.36715 12.2821C6.67185 13.1647 4.69596 12.4105 3.00144 11.918C1.48211 11.3231 -0.744304 10.7237 0.565737 9.81657L0.565891 9.81639Z" fill="#F7FFFF"/>
+</svg></a>
+                            </div>
+                        </div>
+                        <div class="links__item">
+                            <div class="links__title">Приезжайте в офис!</div>
+                            <a href="#">
+                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 19C5.73693 17.9227 4.56619 16.7416 3.5 15.4691C1.9 13.5581 8.83662e-07 10.712 8.83662e-07 8.00005C-0.00141728 5.1676 1.70425 2.61344 4.32107 1.52945C6.93789 0.445455 9.95007 1.04529 11.952 3.04905C13.2685 4.35966 14.0059 6.14244 14 8.00005C14 10.712 12.1 13.5581 10.5 15.4691C9.43382 16.7416 8.26307 17.9227 7 19ZM7 5.00005C5.92821 5.00005 4.93782 5.57185 4.40193 6.50005C3.86603 7.42825 3.86603 8.57185 4.40193 9.50005C4.93782 10.4283 5.92821 11.0001 7 11.0001C8.65686 11.0001 10 9.6569 10 8.00005C10 6.3432 8.65686 5.00005 7 5.00005Z" fill="#0C5F2C"/>
+                                </svg>
+                                Саратов,<br> 6-й Соколовогорский проезд, 12Б
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper tabs__wrapper" id="tab">
+                <div class="container">
+                    <h1>Условия и требования</h1>
+                    <div class="tabs__row">
+                        <div class="tabs__btn active" data-tab="auto">Автомобиль</div>
+                        <div class="tabs__btn" data-tab="client">Заемщик</div>
+                        <div class="tabs__btn" data-tab="docs">Документы</div>
+                    </div>
+                    <div class="tabs__container">
+                        <div class="tab active" data-tab="auto">
+                            <div class="tab__title">Требования к автомобилю</div>
+                            <div class="cars__row">
+                                <div class="cars__item">
+                                    <img src="img/car1.png" alt="">
+                                    <div class="cars__title"><svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>Легковые автомобили</div>
+                                </div>
+                                <div class="cars__item">
+                                    <img src="img/car2.png" alt="">
+                                    <div class="cars__title"><svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>Грузовые автомобили</div>
+                                </div>
+                                <div class="cars__item">
+                                    <img src="img/car3.png" alt="">
+                                    <div class="cars__title"><svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>Коммерческие автомобили</div>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+<defs>
+<linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                                Не старше 2000 года выпуска (старше — по согласованию)
+                            </div>
+                            <div class="title">
+                                <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+<defs>
+<linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                                Зарегистрирован в ГИБДД РФ
+                            </div>
+                            <div class="title">
+                                <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+<defs>
+<linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA330"/>
+<stop offset="1" stop-color="#FFC411"/>
+</linearGradient>
+</defs>
+</svg>
+                                Не требуется КАСКО
+                            </div>
+                        </div>
+                        <div class="tab" data-tab="client">
+                            <div class="tab__title">Требования к заемщику</div>
+                            <div class="client-tab__row">
+                                <div class="client-tab__wrapper">
+                                    <div class="client-tab__wrapper--item">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Физические и юридические лица
+                                    </div>
+                                    <div class="client-tab__wrapper--item">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Граждане РФ
+                                    </div>
+                                    <div class="client-tab__wrapper--item">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Собственник авто
+                                    </div>
+                                </div>
+                                <div class="client-tab__titles">
+                                    <div class="title">
+                                        <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+        <defs>
+        <linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFA330"/>
+        <stop offset="1" stop-color="#FFC411"/>
+        </linearGradient>
+        </defs>
+        </svg>
+                                        Без справок о доходах
+                                    </div>
+                                    <div class="title">
+                                        <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+        <defs>
+        <linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFA330"/>
+        <stop offset="1" stop-color="#FFC411"/>
+        </linearGradient>
+        </defs>
+</svg>
+                                        Любая кредитная история
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab" data-tab="docs">
+                            <div class="tab__title">Требования к документам</div>
+                            <div class="title">
+                                <svg width="45" height="38" viewBox="0 0 45 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.2081 37.1509L0.624023 22.3017L7.10944 15.6984L15.2081 23.9676L37.8908 0.849121L44.3763 7.45245L15.2081 37.1509Z" fill="url(#paint0_linear_206_55)"/>
+        <defs>
+        <linearGradient id="paint0_linear_206_55" x1="22.5001" y1="0.849121" x2="22.5001" y2="37.1509" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFA330"/>
+        <stop offset="1" stop-color="#FFC411"/>
+        </linearGradient>
+        </defs>
+</svg>
+                                Любая кредитная история
+                            </div>
+                            <div class="docs__row">
+                                <div class="docs__item">
+                                    <img src="img/doc1.png" alt="">
+                                    <div class="docs__title">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Паспорт РФ
+                                    </div>
+                                </div>
+                                <div class="docs__item">
+                                    <img src="img/doc2.png" alt="">
+                                    <div class="docs__title">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Паспорт<br> транспортного средства
+                                    </div>
+                                </div>
+                                <div class="docs__item">
+                                    <img src="img/doc3.png" alt="">
+                                    <div class="docs__title">
+                                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2689 31.558L0.806152 18.8301L6.34824 13.1701L13.2689 20.258L32.6523 0.442139L38.1944 6.10214L13.2689 31.558Z" fill="url(#paint0_linear_206_24)"/>
+<defs>
+<linearGradient id="paint0_linear_206_24" x1="19.5003" y1="0.442139" x2="19.5003" y2="31.558" gradientUnits="userSpaceOnUse">
+<stop stop-color="#359845"/>
+<stop offset="1" stop-color="#A5D05F"/>
+</linearGradient>
+</defs>
+</svg>
+                                        Свидетельство о регистрации<br> транспортного средства
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper loan__wrapper">
+                <div class="container">
+                    <div class="loan__title">Оставьте заявку на займ сейчас и получите <br><span>+10% от оценочной стоимости автомобиля!</span></div>
+                    <form action="#">
+                        <div class="loan__phone">
+                            <label for="">Ваш телефон</label>
+                            <input type="text" name="phone" placeholder="+7(___) ___-____">
+                        </div>
+                        <button type="submit" class="app">Отправить заявку</button>
+                    </form>
+                    <img src="img/loan.png" alt="">
+                    <div class="loan__subtitle">к оценочной  стоимости <br>автомобиля</div>
+                </div>
+            </div>
+            <div class="wrapper advantages__wrapper" id="advantage">
+                <div class="container">
+                    <h1>Наши преимущества</h1>
+                    <div class="advantages__row">
+                        <div class="advantages__item">
+                            <img src="img/adv1.svg" alt="">
+                            <div class="advantages__title">Работаем по закону</div>
+                            <div class="advantages__subtitle">ФЗ «О финансовой аренде (лизинге)»<br> от 29.10.1998№ 164-ФЗ</div>
+                        </div>
+                        <div class="advantages__item">
+                            <img src="img/adv2.svg" alt="">
+                            <div class="advantages__title">Без скрытых комиссий</div>
+                            <div class="advantages__subtitle">Оценка авто, оформление договора,<br> досрочное погашение - бесплатно!</div>
+                        </div>
+                        <div class="advantages__item">
+                            <img src="img/adv3.svg" alt="">
+                            <div class="advantages__title">Всегда на стороне клиента</div>
+                            <div class="advantages__subtitle">Рефинансирование и гибкая<br> процентная ставка!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper finance__wrapper">
+                <div class="container">
+                    <div class="finance__title">Финансирование юридических лиц</div>
+                    <div class="finance__subtitle">Выдаём займы под залог авто юридическим лицами и индивидуальным предпринимателям для финансирования оборотных средств</div>
+                    <div class="finance__item"><img src="img/done-orange.svg" alt="">Без оценки бухгалтерского баланса</div>
+                    <div class="finance__item"><img src="img/done-orange.svg" alt="">Без справок и поручителей</div>
+                    <div class="finance__subtitle">Оставьте заявку и получите<br> специальную ставку<br><span>для юридических лиц:</span></div>
+                    <form action="#" class="finance__form">
+                        <div class="finance__phone">
+                            <label for="">Ваш телефон</label>
+                            <input type="text" name="phone" placeholder="+7(___) ___-____">
+                        </div>
+                        <button type="submit" class="app">Отправить заявку</button>
+                    </form>
+                    <img src="img/finance-man.png" alt="" class="finance__bg">
+                </div>
+            </div>
+            <div class="wrapper money">
+                <div class="container">
+                    <h2>Снизьте ставку по действующему займу</h2>
+                    <div class="money__subtitle">Вам отказываются снижать слишком высокий процент по текущему займу? Избавим от огромных переплат и давления высоких платежей!</div>
+                    <form action="#">
+                        <div class="money__phone">
+                            <label for="">Ваш телефон</label>
+                            <input type="text" name="phone" placeholder="+7(___) ___-____">
+                        </div>
+                        <button class="app" type="submit">Получить сниженную ставку</button>
+                    </form>
+                    <img src="img/money-bg.png" alt="" class="money__img">
+                </div>
+            </div>
+            <div class="wrapper accordion">
+                <div class="container">
+                    <h2>Ответы на частые вопросы</h2>
+                    <div class="accordion__container active">
+                        <div class="close"></div>
+                        <div class="accordion__title">На каких условиях я могу получить деньги?</div>
+                        <div class="accordion__subtitle" style="display: block">
+                            Вы можете получить от 50 000 ₽ до 5 000 000 ₽ на срок от 2 дней до 3 лет. Для оформления договора вы должны быть собственником автомобиля старше 18 лет с российским гражданством. Всего 3 документа на руках: паспорт РФ, ПТС и СТС.
+                        </div>
+                    </div>
+                    <div class="accordion__container">
+                        <div class="close"></div>
+                        <div class="accordion__title">Как влияет кредитная история на решение о выдаче денег?</div>
+                        <div class="accordion__subtitle">
+                            Вы можете получить от 50 000 ₽ до 5 000 000 ₽ на срок от 2 дней до 3 лет. Для оформления договора вы должны быть собственником автомобиля старше 18 лет с российским гражданством. Всего 3 документа на руках: паспорт РФ, ПТС и СТС.
+                        </div>
+                    </div>
+                    <div class="accordion__container">
+                        <div class="close"></div>
+                        <div class="accordion__title">Останется ли автомобиль у меня?</div>
+                        <div class="accordion__subtitle">
+                            Вы можете получить от 50 000 ₽ до 5 000 000 ₽ на срок от 2 дней до 3 лет. Для оформления договора вы должны быть собственником автомобиля старше 18 лет с российским гражданством. Всего 3 документа на руках: паспорт РФ, ПТС и СТС.
+                        </div>
+                    </div>
+                    <div class="accordion__container">
+                        <div class="close"></div>
+                        <div class="accordion__title">Как к вам добраться?</div>
+                        <div class="accordion__subtitle">
+                            Вы можете получить от 50 000 ₽ до 5 000 000 ₽ на срок от 2 дней до 3 лет. Для оформления договора вы должны быть собственником автомобиля старше 18 лет с российским гражданством. Всего 3 документа на руках: паспорт РФ, ПТС и СТС.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper about">
+                <div class="container">
+                    <div class="about__title">О безопасности работы компании свидетельствует официальная регистрация в реестре ЦБ. </div>
+                    <div class="about__subtitle">
+                        Более подробнее можно узнать на главной странице микрофинансовой организации или у консультантов.
+                        <br><br>
+                        Для компании «Личные наличные» очень важна репутация. О безопасности и результативности сотрудничества свидетельствуют многочисленные положительные отзывы от реальных клиентов. Значительный опыт в микрофинансировании и хорошая репутация подчеркивают удобство и безопасность работы с «Личные наличные» для любого жителя Смоленска и других городов РФ. Дополнительно стоит отметить профессионализм сотрудников, в результате чего заявки обслуживаются быстро для комфорта клиентов.
+                        <br><br>
+                        Услугу по выдаче займа под залог авто предоставляет: Общество с ограниченной ответственностью Микрокредитная компания «ТайгерФинанс». Свидетельство в реестре МФО № 001603066007856 от 15 июля 2016 г. Юридический адрес: 214011, г. Смоленск ул. Автозаводская , д. 11а кв.1. ОГРН 1156733019299, ИНН 6732114215, КПП 673201001
+                        <br><br>
+                        Услугу по выдаче займа под залог авто предоставляет: Общество с ограниченной ответственностью Лизинговая компания «ФИНЛАЙН-СМОЛЕНСК». Юридический адрес: РФ, 214011, г. Смоленск ул. Автозаводская , д. 11а кв.1 ОГРН 1186733011189 , ИНН 6732164590 , КПП 673201001
+                        <br><br>
+                        Услугу по выдаче займа под залог авто предоставляет: Кредитный потребительский кооператив «Классик Финанс». Свидетельство о членстве в Саморегулируемой организации «Национального объединения кредитных кооперативов» № 397 от 11.11.2022 Юридический адрес: Московская обл., г.о. Химки, г. Химки, ул. Жуковского, д. 10, ПОМЕЩ. 19, 141401, ИНН 5047267714 / КПП 504701001 , ОГРН 1225000103063
+
+                    </div>
+                    <div class="map__container" id="contacts">
+                        <div class="map__wrapper">
+                            <div class="map__title">Ждем вас в нашем офисе<br>в Саратове</div>
+                            <a href="#" class="map__address">6-й Соколовогорский проезд., 12Б</a>
+                            <a href="tel:+78007775837" class="map__phone">+7 (800) 777-58-37</a>
+                            <div class="links__soc">
+                                    <a href="#"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.1159 4.11953C18.8439 1.97828 15.8146 0.788696 12.6171 0.788696C5.96951 0.788696 0.584145 5.86426 0.584145 12.1294C0.584145 14.112 1.17317 16.0947 2.18293 17.7601L0.5 23.6287L6.89512 22.0426C8.6622 22.915 10.5976 23.3908 12.6171 23.3908C19.2646 23.3908 24.65 18.3153 24.65 12.0501C24.5659 9.11579 23.3878 6.26079 21.1159 4.11953ZM18.4232 16.174C18.1707 16.8084 16.9927 17.4429 16.4037 17.5222C15.8988 17.6015 15.2256 17.6015 14.5524 17.4429C14.1317 17.2843 13.5427 17.1257 12.8695 16.8084C9.84024 15.6189 7.90488 12.7639 7.73659 12.5259C7.56829 12.3673 6.47439 11.0191 6.47439 9.59163C6.47439 8.16412 7.23171 7.52968 7.48415 7.21246C7.73659 6.89523 8.07317 6.89523 8.32561 6.89523C8.4939 6.89523 8.74634 6.89523 8.91463 6.89523C9.08292 6.89523 9.33537 6.81593 9.5878 7.37107C9.84024 7.92621 10.4293 9.35371 10.5134 9.43301C10.5976 9.59163 10.5976 9.75024 10.5134 9.90885C10.4293 10.0675 10.3451 10.2261 10.1768 10.3847C10.0085 10.5433 9.84024 10.7812 9.75609 10.8605C9.5878 11.0191 9.41951 11.1777 9.5878 11.4157C9.7561 11.7329 10.3451 12.6052 11.2707 13.3983C12.4488 14.35 13.3744 14.6672 13.711 14.8258C14.0476 14.9844 14.2159 14.9051 14.3841 14.7465C14.5524 14.5879 15.1415 13.9534 15.3098 13.6362C15.4781 13.319 15.7305 13.3983 15.9829 13.4776C16.2354 13.5569 17.75 14.2707 18.0024 14.4293C18.339 14.5879 18.5073 14.6672 18.5915 14.7465C18.6756 14.9844 18.6756 15.5396 18.4232 16.174Z" fill="white"/>
+    </svg></a>
+                                    <a href="#"><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.565891 9.81639C3.25459 8.41576 6.2559 7.24671 9.06017 6.07172C13.8846 4.14717 18.7282 2.25598 23.6207 0.495302C24.5726 0.195318 26.283 -0.0980127 26.4507 1.23608C26.3588 3.12455 25.981 5.00197 25.7219 6.87938C25.0643 11.008 24.3041 15.1225 23.5628 19.2375C23.3074 20.6082 21.4918 21.3177 20.3302 20.4405C17.5383 18.6571 14.7251 16.8909 11.9689 15.0661C11.066 14.1985 11.9033 12.9525 12.7096 12.3329C15.009 10.1897 17.4476 8.36886 19.6268 6.11495C20.2147 4.77244 18.4778 5.90386 17.9049 6.25056C14.7569 8.30218 11.686 10.4791 8.36715 12.2821C6.67185 13.1647 4.69596 12.4105 3.00144 11.918C1.48211 11.3231 -0.744304 10.7237 0.565737 9.81657L0.565891 9.81639Z" fill="#F7FFFF"/>
+    </svg></a>
+                            </div>
+                            <div class="map__subtitle">Приём заявок ежедневно с<br> 9:00 до 19:00</div>
+                            <a href="#" class="map__btn app">Подать заявку</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper map">
+                <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3A9dbeaf5d5ef131653759e859f551ca3c29a35f86a4a2f6f8ca5b7bf82cbcd816&amp;source=constructor" width="100%" height="620" frameborder="0"></iframe>
+            </div>
+        </main>
+        <footer class="wrapper footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__row--item">
+                        <a href="#" class="footer__logo"><img src="img/footer-logo.png" alt=""></a>
+                        <div class="footer__subtitle">Займы под залог авто для физических<br>и юридических лиц в Саратове</div>
+                    </div>
+                    <div class="footer__row--item">
+                        <a href="#calc" class="footer__menu--item">Рассчитать платёж</a>
+                        <a href="#step" class="footer__menu--item">51 минута до займа</a>
+                        <a href="#tab" class="footer__menu--item">Условия и требования</a>
+                        <a href="#advantage" class="footer__menu--item">Преимущества</a>
+                    </div>
+                    <div class="footer__row--item">
+                        <a href="#" class="footer__menu--item">Для юридических лиц</a>
+                        <a href="#" class="footer__menu--item">Снизить ставку</a>
+                        <a href="#" class="footer__menu--item">Отзывы</a>
+                        <a href="#" class="footer__menu--item">Частые вопросы</a>
+                    </div>
+                    <div class="footer__row--item">
+                        <a href="tel:+78007775837" class="footer__phone">+7 (800) 777-58-37</a>
+                        <div class="links__soc">
+                                <a href="#"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.1159 4.11953C18.8439 1.97828 15.8146 0.788696 12.6171 0.788696C5.96951 0.788696 0.584145 5.86426 0.584145 12.1294C0.584145 14.112 1.17317 16.0947 2.18293 17.7601L0.5 23.6287L6.89512 22.0426C8.6622 22.915 10.5976 23.3908 12.6171 23.3908C19.2646 23.3908 24.65 18.3153 24.65 12.0501C24.5659 9.11579 23.3878 6.26079 21.1159 4.11953ZM18.4232 16.174C18.1707 16.8084 16.9927 17.4429 16.4037 17.5222C15.8988 17.6015 15.2256 17.6015 14.5524 17.4429C14.1317 17.2843 13.5427 17.1257 12.8695 16.8084C9.84024 15.6189 7.90488 12.7639 7.73659 12.5259C7.56829 12.3673 6.47439 11.0191 6.47439 9.59163C6.47439 8.16412 7.23171 7.52968 7.48415 7.21246C7.73659 6.89523 8.07317 6.89523 8.32561 6.89523C8.4939 6.89523 8.74634 6.89523 8.91463 6.89523C9.08292 6.89523 9.33537 6.81593 9.5878 7.37107C9.84024 7.92621 10.4293 9.35371 10.5134 9.43301C10.5976 9.59163 10.5976 9.75024 10.5134 9.90885C10.4293 10.0675 10.3451 10.2261 10.1768 10.3847C10.0085 10.5433 9.84024 10.7812 9.75609 10.8605C9.5878 11.0191 9.41951 11.1777 9.5878 11.4157C9.7561 11.7329 10.3451 12.6052 11.2707 13.3983C12.4488 14.35 13.3744 14.6672 13.711 14.8258C14.0476 14.9844 14.2159 14.9051 14.3841 14.7465C14.5524 14.5879 15.1415 13.9534 15.3098 13.6362C15.4781 13.319 15.7305 13.3983 15.9829 13.4776C16.2354 13.5569 17.75 14.2707 18.0024 14.4293C18.339 14.5879 18.5073 14.6672 18.5915 14.7465C18.6756 14.9844 18.6756 15.5396 18.4232 16.174Z" fill="white"/>
+</svg></a>
+                                <a href="#"><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.565891 9.81639C3.25459 8.41576 6.2559 7.24671 9.06017 6.07172C13.8846 4.14717 18.7282 2.25598 23.6207 0.495302C24.5726 0.195318 26.283 -0.0980127 26.4507 1.23608C26.3588 3.12455 25.981 5.00197 25.7219 6.87938C25.0643 11.008 24.3041 15.1225 23.5628 19.2375C23.3074 20.6082 21.4918 21.3177 20.3302 20.4405C17.5383 18.6571 14.7251 16.8909 11.9689 15.0661C11.066 14.1985 11.9033 12.9525 12.7096 12.3329C15.009 10.1897 17.4476 8.36886 19.6268 6.11495C20.2147 4.77244 18.4778 5.90386 17.9049 6.25056C14.7569 8.30218 11.686 10.4791 8.36715 12.2821C6.67185 13.1647 4.69596 12.4105 3.00144 11.918C1.48211 11.3231 -0.744304 10.7237 0.565737 9.81657L0.565891 9.81639Z" fill="#F7FFFF"/>
+</svg></a>
+                        </div>
+                        <div class="footer__subtitle">Приём заявок ежедневно с 9:00 до 19:00</div>
+                        <a href="#" class="footer__btn app">Перезвоните мне</a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Разработка и продвижение — Регион.Промо</a>
+                </div>
+            </div>
+        </footer>
+        <div class="bid__wrapper">
+            <form action="#" class="bid__container">
+                <div class="close__btn">
+                    <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.5001 47.3335C14.227 47.3389 5.86459 41.6539 2.31519 32.9312C-1.23421 24.2085 0.729075 14.1676 7.28887 7.49403C13.0806 1.59701 21.5222 -0.706042 29.4339 1.45242C37.3455 3.61088 43.5252 9.90293 45.6451 17.9584C47.765 26.0139 45.5031 34.609 39.7114 40.506C35.4201 44.8951 29.5826 47.3535 23.5001 47.3335ZM5.16679 24.4014C5.27522 34.6709 13.511 42.9223 23.5976 42.8674C33.6842 42.8119 41.8324 34.4709 41.8324 24.2007C41.8324 13.9305 33.6842 5.58951 23.5976 5.53403C13.511 5.4791 5.27522 13.7305 5.16679 24V24.4014ZM17.5624 33.3334L14.3335 30.0434L20.2689 24L14.3335 17.9567L17.5647 14.6667L23.5001 20.71L29.4355 14.6667L32.6668 17.9567L26.7314 24L32.6668 30.0434L29.4378 33.3334L23.5001 27.29L17.5647 33.3334H17.5624Z" fill="#E3E3E3"/>
+</svg>
+                </div>
+                <div class="bid__title">Оставьте заявку</div>
+                <label for="">Ваш телефон</label>
+                <input type="text" name="phone" placeholder="+7(___) ___-____">
+                <button>Отправить заявку</button>
+                <div class="bid__check">
+                   <img src="img/check.svg" alt="">
+                    <div class="bid__subtitle">Отправляя заявку, я подписываю <a href="#">Соглашение об
+                    электронном взаимодействии</a> и предоставляю
+                    <a href="#">Согласие на обработку моих персональных данных</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        <div class="thanks">
+            <div class="thanks__container container">
+                <div class="close__btn">
+                    <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.5001 47.3335C14.227 47.3389 5.86459 41.6539 2.31519 32.9312C-1.23421 24.2085 0.729075 14.1676 7.28887 7.49403C13.0806 1.59701 21.5222 -0.706042 29.4339 1.45242C37.3455 3.61088 43.5252 9.90293 45.6451 17.9584C47.765 26.0139 45.5031 34.609 39.7114 40.506C35.4201 44.8951 29.5826 47.3535 23.5001 47.3335ZM5.16679 24.4014C5.27522 34.6709 13.511 42.9223 23.5976 42.8674C33.6842 42.8119 41.8324 34.4709 41.8324 24.2007C41.8324 13.9305 33.6842 5.58951 23.5976 5.53403C13.511 5.4791 5.27522 13.7305 5.16679 24V24.4014ZM17.5624 33.3334L14.3335 30.0434L20.2689 24L14.3335 17.9567L17.5647 14.6667L23.5001 20.71L29.4355 14.6667L32.6668 17.9567L26.7314 24L32.6668 30.0434L29.4378 33.3334L23.5001 27.29L17.5647 33.3334H17.5624Z" fill="#E3E3E3"/>
+</svg>
+                </div>
+                <div class="thanks__header">
+                    <a href="#" class="header__logo">
+                        <img src="img/header-logo.png" alt="">
+                    </a>
+                    <div class="header__p">
+                        <span>Займы под залог авто</span>
+                        для физических и юридических
+                        <br>
+                        лиц в Саратове
+                    </div>
+                </div>
+                <div class="thanks__title">Спасибо за заявку!</div>
+                <div class="thanks__subtitle">В рабочее время<br> мы обработаем её<br> за <span>15 минут</span><br> и свяжемся с вами!</div>
+                <img src="img/header-bg.png" alt="" class="thanks__bg">
+            </div>
+        </div>
+        <div class="burger">
+            <div class="burger__container">
+                <div class="close__btn">
+                    <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.5001 47.3335C14.227 47.3389 5.86459 41.6539 2.31519 32.9312C-1.23421 24.2085 0.729075 14.1676 7.28887 7.49403C13.0806 1.59701 21.5222 -0.706042 29.4339 1.45242C37.3455 3.61088 43.5252 9.90293 45.6451 17.9584C47.765 26.0139 45.5031 34.609 39.7114 40.506C35.4201 44.8951 29.5826 47.3535 23.5001 47.3335ZM5.16679 24.4014C5.27522 34.6709 13.511 42.9223 23.5976 42.8674C33.6842 42.8119 41.8324 34.4709 41.8324 24.2007C41.8324 13.9305 33.6842 5.58951 23.5976 5.53403C13.511 5.4791 5.27522 13.7305 5.16679 24V24.4014ZM17.5624 33.3334L14.3335 30.0434L20.2689 24L14.3335 17.9567L17.5647 14.6667L23.5001 20.71L29.4355 14.6667L32.6668 17.9567L26.7314 24L32.6668 30.0434L29.4378 33.3334L23.5001 27.29L17.5647 33.3334H17.5624Z" fill="#E3E3E3"/>
+</svg>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <img src="img/modal.png" alt="">
+            <a href="#"><div class="modal__img"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.1159 4.11953C18.8439 1.97828 15.8146 0.788696 12.6171 0.788696C5.96951 0.788696 0.584145 5.86426 0.584145 12.1294C0.584145 14.112 1.17317 16.0947 2.18293 17.7601L0.5 23.6287L6.89512 22.0426C8.6622 22.915 10.5976 23.3908 12.6171 23.3908C19.2646 23.3908 24.65 18.3153 24.65 12.0501C24.5659 9.11579 23.3878 6.26079 21.1159 4.11953ZM18.4232 16.174C18.1707 16.8084 16.9927 17.4429 16.4037 17.5222C15.8988 17.6015 15.2256 17.6015 14.5524 17.4429C14.1317 17.2843 13.5427 17.1257 12.8695 16.8084C9.84024 15.6189 7.90488 12.7639 7.73659 12.5259C7.56829 12.3673 6.47439 11.0191 6.47439 9.59163C6.47439 8.16412 7.23171 7.52968 7.48415 7.21246C7.73659 6.89523 8.07317 6.89523 8.32561 6.89523C8.4939 6.89523 8.74634 6.89523 8.91463 6.89523C9.08292 6.89523 9.33537 6.81593 9.5878 7.37107C9.84024 7.92621 10.4293 9.35371 10.5134 9.43301C10.5976 9.59163 10.5976 9.75024 10.5134 9.90885C10.4293 10.0675 10.3451 10.2261 10.1768 10.3847C10.0085 10.5433 9.84024 10.7812 9.75609 10.8605C9.5878 11.0191 9.41951 11.1777 9.5878 11.4157C9.7561 11.7329 10.3451 12.6052 11.2707 13.3983C12.4488 14.35 13.3744 14.6672 13.711 14.8258C14.0476 14.9844 14.2159 14.9051 14.3841 14.7465C14.5524 14.5879 15.1415 13.9534 15.3098 13.6362C15.4781 13.319 15.7305 13.3983 15.9829 13.4776C16.2354 13.5569 17.75 14.2707 18.0024 14.4293C18.339 14.5879 18.5073 14.6672 18.5915 14.7465C18.6756 14.9844 18.6756 15.5396 18.4232 16.174Z" fill="white"/>
+</svg></div>Начать диалог</a>
+            <a href="#"><div class="modal__img"><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.565891 9.81639C3.25459 8.41576 6.2559 7.24671 9.06017 6.07172C13.8846 4.14717 18.7282 2.25598 23.6207 0.495302C24.5726 0.195318 26.283 -0.0980127 26.4507 1.23608C26.3588 3.12455 25.981 5.00197 25.7219 6.87938C25.0643 11.008 24.3041 15.1225 23.5628 19.2375C23.3074 20.6082 21.4918 21.3177 20.3302 20.4405C17.5383 18.6571 14.7251 16.8909 11.9689 15.0661C11.066 14.1985 11.9033 12.9525 12.7096 12.3329C15.009 10.1897 17.4476 8.36886 19.6268 6.11495C20.2147 4.77244 18.4778 5.90386 17.9049 6.25056C14.7569 8.30218 11.686 10.4791 8.36715 12.2821C6.67185 13.1647 4.69596 12.4105 3.00144 11.918C1.48211 11.3231 -0.744304 10.7237 0.565737 9.81657L0.565891 9.81639Z" fill="#F7FFFF"/>
+</svg></div>Начать диалог</a>
+        </div>
+    <script src="js/script.js"></script>
+    </body>
+</html>
